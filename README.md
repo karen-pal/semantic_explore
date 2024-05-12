@@ -1,4 +1,14 @@
 # Descripción
+## A saber
+Como se verá se cerró el círculo de procesamiento, a partir de un conjunto de videos, se extraen las frames, 
+se infiere usando CLIP interrogator la semántica de la imagen y finalmente se reagrupan los videos, en videos
+nuevos que están relacionados según similitud de esa semántica inferida.
+
+Se usó USE (universal sentence embeddings) como primer acercamiento así que no se puede decodificar en lenguaje lo encodeado en los embeddings.
+
+También como se ve faltan muchas cosas, sobre todo orden en el caos.
+
+## Contenido
 Acá hay un par de datasets importantes:
 
 el `full_dataset.csv` en realidad es el básico, está compuesto por
@@ -46,15 +56,10 @@ los cluster names
 
 `cluster_to_video.ipynb` toma el dataset anotado con cluster names `annotated_full_dataset_USE+clustering.csv` y nos construye videos para cada cluster.
 
-## A saber
-Como se ve se cerró el círculo de procesamiento, a partir de un conjunto de videos, se extraen las frames, 
-se infiere usando CLIP interrogator la semántica de la imagen y finalmente se reagrupan los videos, en videos
-nuevos que están relacionados según esa semántica inferida.
-
-También como se ve faltan muchas cosas, sobre todo orden en el caos.
 
 ## Tareas : prácticas
 - [ ] ordenar las notebooks para que sean legibles y el repositorio tenga estructura (fue muy orgánico)
+- [ ] probar alternativas a USE - como SBERT para poder decodificar e interpolar oraciones.
 - [ ] deployar para poder ver el espacio de embeddings interactivos
 - [ ] seguir modificando el html para tener interactividad más interesante
 - [ ] generar una notebook que llame al final del pipeline, teniendo el dataset anotado con USE embeddings, y un k, que haga k clusters y genere esos videos
