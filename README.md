@@ -11,7 +11,7 @@ el `full_dataset.csv` en realidad es el básico, está compuesto por
 y su prompt extraida de clip interrogator es prompt (definido en `clip_interrogator_process.ipynb`)
 
 a partir de esto se corrió `data_preparation_semantic_transverse_interrogator.ipynb`
-para generar una visualización en 3d de las imágenes (se puede ver en `interactive_plot_with_path_color_and_toggleable_legend_and_log (1).html`)
+para generar una visualización en 3d de las imágenes (se puede ver en `interactive_plot_with_path_color_and_toggleable_legend_and_log (1).html` o vivo en https://karen-pal.github.io/semantic_explore/interactive_plot_with_path_color_and_toggleable_legend_and_log%20(1).html)
 
 En ese mismo se corrió USE (universal sentence embeddings) para generar embeddings de la columna prompt 
 generando 
@@ -46,11 +46,13 @@ los cluster names
 
 `cluster_to_video.ipynb` toma el dataset anotado con cluster names `annotated_full_dataset_USE+clustering.csv` y nos construye videos para cada cluster.
 
+## A saber
 Como se ve se cerró el círculo de procesamiento, a partir de un conjunto de videos, se extraen las frames, 
 se infiere usando CLIP interrogator la semántica de la imagen y finalmente se reagrupan los videos, en videos
 nuevos que están relacionados según esa semántica inferida.
 
-También como se ve faltan muchas cosas
+También como se ve faltan muchas cosas, sobre todo orden en el caos.
+
 ## Tareas : prácticas
 - [ ] ordenar las notebooks para que sean legibles y el repositorio tenga estructura (fue muy orgánico)
 - [ ] deployar para poder ver el espacio de embeddings interactivos
