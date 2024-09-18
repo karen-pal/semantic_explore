@@ -8,6 +8,22 @@ Se usó USE (universal sentence embeddings) como primer acercamiento así que no
 
 También como se ve faltan muchas cosas, sobre todo orden en el caos.
 
+## Update
+Descubrí una forma mucho mejor de realizar esto, usando kosmos.
+
+los datasets están en mi huggingface, acá se puede encontrar lo que logré de mucho esfuerzo, poder realizar un buen clustering de los frames de los videos:
+
+ejemplo con 2000 datos:
+https://karen-pal.github.io/semantic_explore/interactive_plot_with_clusters_and_2grams_perplexity_50_2.html
+
+ejemplo con 12k datos (correspondientes a 4000 frames)
+
+https://karen-pal.github.io/semantic_explore/interactive_plot_with_clusters_and_2grams_perplexity_50_FULL.html
+
+Es interesante verlo con 3grams ya que suelen formar una oracion en ingles-neandertal (sust verb sust)
+
+https://karen-pal.github.io/semantic_explore/interactive_plot_with_clusters_and_3grams_perplexity_50_FULL.html
+
 ## Contenido
 Acá hay un par de datasets importantes:
 
